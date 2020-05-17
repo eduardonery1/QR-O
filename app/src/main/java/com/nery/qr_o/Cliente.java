@@ -21,7 +21,7 @@ public class Cliente extends AppCompatActivity {
     private EditText campo1;
     private Bitmap bitmap;
     private Button button;
-    private final static int qrCodeSize = 500;
+    private final static int qrCodeWidth = 500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +56,7 @@ public class Cliente extends AppCompatActivity {
             bitMatrix = new MultiFormatWriter().encode(
                     Value,
                     BarcodeFormat.DATA_MATRIX.QR_CODE,
-                    500, 500, null
+                    qrCodeWidth, qrCodeWidth, null
             );
         }
         catch (IllegalArgumentException Illegalargumentexception) {
